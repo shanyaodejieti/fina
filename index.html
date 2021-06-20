@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Artist——发现更多美好世界</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		.row-zp {
+			margin: 80px 0px 80px 0px;
+		}
+
+		.img-zp {
+			margin: 10px 10px 10px 10px;
+			-webkit-transform: scale(1, 1);
+			-ms-transform: scale(1, 1);
+			transform: scale(1, 1);
+			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s;
+			/* Safari */
+		}
+
+		.img-zp:hover {
+			cursor: pointer;
+			-webkit-transform: scale(2, 2);
+			-ms-transform: scale(2, 2);
+			transform: scale(2, 2);
+			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s;
+			/* Safari */
+			box-shadow: 10px 10px 5px #888888;
+			z-index: 1;
+		}
+
+		.img-zp1:hover {
+			cursor: pointer;
+			-webkit-transform: scale(1.1, 1.1);
+			-ms-transform: scale(1.1, 1.1);
+			transform: scale(1.1, 1.1);
+			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s;
+			/* Safari */
+			box-shadow: 10px 10px 5px #888888;
+			z-index: 1;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row clearfix">
+			<div class="page-header">
+				<img src="images/background-3.png" class="img-responsive center-block">
+			</div>
+			<nav class="navbar navbar-default " role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span
+							class="icon-bar"></span><span class="icon-bar"></span><span
+							class="icon-bar"></span></button><img src="images/logo-2.png" height="60" width="60"><img
+						src="images/logo-4.png" height="60" width="130"> <a class="navbar-brand" href="#"></a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a>
+						</li>
+						<li>
+							<a href="opus.html"><span class="glyphicon glyphicon-picture"></span> 世界名画</a>
+						</li>
+						<li>
+							<a href="aritst.html"><span class="glyphicon glyphicon-user"></span> 艺术家</a>
+						</li>
+						<li>
+							<a href="collect.html"><span class="glyphicon glyphicon-star-empty"></span> 收藏夹</a>
+						</li>
+						<li>
+							<a href="report.html"><span class=""></span> 结业报告</a>
+						</li>
+						
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" />
+						</div> <button type="submit" class="btn btn-default"><span
+								class="glyphicon glyphicon-search"></span></button>
+					</form>
+					<!-- 登录注册start -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a data-toggle="modal" data-target="#register" href=""> 注册</a></li>
+						<li><a data-toggle="modal" data-target="#login" href=""> 登录</a></li>
+					</ul>
+					<!-- 注册窗口 -->
+					<div id="register" class="modal fade" tabindex="-1">
+						<div class="modal-dialog" style="width: 350px;">
+							<div class="modal-content">
+								<div class="modal-body">
+									<button class="close" data-dismiss="modal">
+										<span>&times;</span>
+									</button>
+								</div>
+								<div class="modal-title">
+									<img class="img-responsive center-block" src="images/logo-2.png">
+									<h1 class="text-center">注册</h1>
+								</div>
+								<div class="modal-body">
+									<form class="form-group" action="">
+										<div class="form-group">
+											<label for="">用户名</label>
+											<input class="form-control" type="text" placeholder="6-15位字母或数字">
+										</div>
+										<div class="form-group">
+											<label for="">密码</label>
+											<input class="form-control" type="password" placeholder="至少6位字母或数字">
+										</div>
+										<div class="form-group">
+											<label for="">再次输入密码</label>
+											<input class="form-control" type="password" placeholder="至少6位字母或数字">
+										</div>
+										<div class="form-group">
+											<label for="">邮箱</label>
+											<input class="form-control" type="email" placeholder="例如:123@123.com">
+										</div>
+										<div class="text-right">
+											<button class="btn btn-info" type="submit">提交</button>
+											<button class="btn btn-danger" data-dismiss="modal">取消</button>
+										</div>
+										<a href="" data-toggle="modal" data-dismiss="modal"
+											data-target="#login">已有账号？点我登录</a>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 登录窗口 -->
+				<div id="login" class="modal fade">
+					<div class="modal-dialog" style="width: 350px;">
+						<div class="modal-content">
+							<div class="modal-body">
+								<button class="close" data-dismiss="modal">
+									<span>&times;</span>
+								</button>
+							</div>
+							<div class="modal-title">
+								<img class="img-responsive center-block" src="images/logo-2.png">
+								<h1 class="text-center">登录</h1>
+							</div>
+							<div class="modal-body">
+								<form class="form-group" action="">
+									<div class="form-group">
+										<label for="请输入用户名">用户名</label>
+										<input class="form-control" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="form-group">
+										<label for="请输入密码">密码</label>
+										<input class="form-control" type="password" placeholder="请输入密码">
+									</div>
+									<div class="text-right">
+										<button class="btn btn-info" type="submit">登录</button>
+										<button class="btn btn-danger" data-dismiss="modal">取消</button>
+									</div>
+									<a href="" data-toggle="modal" data-dismiss="modal"
+										data-target="#register">还没有账号？点我注册</a>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 登录注册end -->
+			</nav>
+
+
+			<div class="carousel slide" id="carousel-175475">
+				<ol class="carousel-indicators">
+					<li data-slide-to="0" data-target="#carousel-175475">
+					</li>
+					<li data-slide-to="1" data-target="#carousel-175475">
+					</li>
+					<li data-slide-to="2" data-target="#carousel-175475">
+					</li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="item active left">
+						<img alt="" src="images/Vetheuil in Summer..jpg" />
+						<div class="carousel-caption">
+							<h3>
+								夏天的香芹
+							</h3>
+							<p>
+								法国艺术家『克劳德·莫奈』于1880所作，现在大都会艺术博物馆（Metropolitan Museum of Art），美国纽约。
+							</p>
+						</div>
+					</div>
+					<div class="item next left">
+						<img alt="" src="images/Sunset on the Seine at Lavacourt, Winter Effect..jpg" />
+						<div class="carousel-caption">
+							<h3>
+								《拉瓦科特塞纳河日落，冬季效应》
+							</h3>
+							<p>
+								法国艺术家『克劳德·莫奈』 于1880年 所作。
+							</p>
+						</div>
+					</div>
+					<div class="item">
+						<img alt="" src="images/d..jpg" />
+						<div class="carousel-caption">
+							<h3>
+								罗纳河上的星夜
+							</h3>
+							<p>
+								是荷兰后印象派画家文森特·梵高于1888年9月创作的一幅油画，现收藏于法国巴黎奥赛博物馆。
+							</p>
+						</div>
+					</div>
+				</div> <a class="left carousel-control" href="#carousel-175475" data-slide="prev"><span
+						class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control"
+					href="#carousel-175475" data-slide="next"><span
+						class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+			<br>
+			<div class="container">
+				<div class="row clearfix">
+					<div class="col-md-12 column">
+						<div class="row clearfix">
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-lg btn-info btn-block">风景画</button>
+							</div>
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-success btn-lg btn-block">花卉画</button>
+							</div>
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-warning btn-lg btn-block">肖像画</button>
+							</div>
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-primary btn-lg btn-block">寓言画</button>
+							</div>
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-lg btn-inverse btn-block">风俗画</button>
+							</div>
+							<div class="col-md-2 column">
+								<button type="button" class="btn btn-danger btn-lg btn-block">神话画</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="container">
+				<h3 class="text-center">
+					艺术家推荐
+				</h3>
+				<hr>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<img alt="达芬奇" src="images/达芬奇1.jpg" height="300" width="200"
+								class="img-circle img-responsive" />
+							<div class="caption">
+								<h3>
+									莱昂纳多·达·芬奇
+								</h3>
+								<p>中文名：莱昂纳多·达·芬奇</p>
+								<p>英文名：Leonardo Di Ser Piero Da Vinci</p>
+								<p>国籍：佛罗伦萨共和国</p>
+								<p>风格：新古典主义</p>
+								<p>出生年月：1452年4月15日</p>
+								<p>去世年月：1519年5月2日</p>
+								<p>
+									<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<img alt="莫奈" src="images/莫奈..jpg" height="300" width="200"
+								class="img-circle img-responsive" />
+							<div class="caption">
+								<h3>
+									克劳德·莫奈
+								</h3>
+								<p>中文名：克劳德·莫奈</p>
+								<p>英文名：Claude Monet</p>
+								<p>国籍：法国</p>
+								<p>风格：印象主义</p>
+								<p>出生年月：1840年11月14日</p>
+								<p>去世年月：1926年12月5日</p>
+								<p>
+									<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="thumbnail">
+							<img alt="米勒" src="images/米勒1.jpg" height="300" width="200"
+								class="img-circle img-responsive" />
+							<div class="caption">
+								<h3>
+									让·弗朗索瓦·米勒
+								</h3>
+								<p>中文名：让·弗朗索瓦·米勒</p>
+								<p>英文名：FrancoisMillet</p>
+								<p>国籍：法国</p>
+								<p>风格：现实主义</p>
+								<p>出生年月：1814年</p>
+								<p>去世年月：1875年</p>
+								<p>
+								<p>
+									<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div> <button type="button" class="btn btn-block btn-link btn-lg"><a class="btn" href="aritst.html">
+						<h4>查看更多艺术家</h4>
+					</a></button>
+				<br>
+				<br>
+			</div>
+			<h3 class="text-center">
+				名画推荐
+				<hr>
+			</h3>
+
+			<div class="container">
+				<div class="row-zp">
+					<div class="col-md-2">
+						<img src="images/Chrysanthemums-1.jpg" width="140" height="140" alt="..." class="img-zp">
+					</div>
+
+					<div class="col-md-2">
+						<img src="images/Fruit%20Basket%20with%20Apples%20and%20Grapes.jpg" width="140" height="140"
+							alt="..." class="img-zp">
+					</div>
+
+					<div class="col-md-2">
+						<img src="images/The%20Seine%20at%20Argenteuil.jpg" width="140" height="140" alt="..."
+							class="img-zp">
+					</div>
+
+					<div class="col-md-2">
+						<img src="images/Water%20Lilies.jpg" width="140" height="140" alt="..." class="img-zp">
+					</div>
+
+					<div class="col-md-2">
+						<img src="images/Waterloo%20Bridge.jpg" width="140" height="140" alt="..." class="img-zp">
+					</div>
+
+					<div class="col-md-2">
+						<img src="images/查令十字桥.jpg" width="140" height="140" alt="..." class="img-zp">
+					</div>
+
+				</div>
+			</div>
+			<div class="clearfix" style="margin-bottom: 100px;"></div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="星月夜" src="images/d_5..jpg" class="img-responsive img-rounded img-zp1" />
+						<div class="caption">
+							<h3>
+								星月夜The Starry Night
+							</h3>
+							<p>作品名称:星月夜The Starry Night</p>
+							<p>创作者::文森特·梵高 Vincent van Gogh</p>
+							<p>创作年代:1889</p>
+							<p>风格：后印象派</p>
+							<p>体裁：cloudscape</p>
+							<p>材质：布面油画</p>
+							<p>
+							<p>
+								<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								<a class="btn btn-info text-justify" href="#">收藏</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="向日葵" src="images/d_4..jpeg" class="img-responsive img-rounded img-zp1" />
+						<div class="caption">
+							<h3>
+								花瓶里的十二朵向日葵
+							</h3>
+							<p>作品名称:花瓶里的十二朵向日葵</p>
+							<p>创作者:文森特·梵高 Vincent van Gogh</p>
+							<p>创作年代:1889</p>
+							<p>风格：后印象派</p>
+							<p>体裁：花卉画</p>
+							<p>材质：布面油画</p>
+							<p>
+								<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								<a class="btn btn-info text-justify" href="#">收藏</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<img alt="日出·印像" src="images/d_8..jpeg" class="img-responsive img-rounded img-zp1" />
+						<div class="caption">
+							<h3>
+								《日出·印象》
+							</h3>
+							<p>作品名称:《日出·印象》</p>
+							<p>创作者:克劳德·莫奈 Claude Monet</p>
+							<p>创作年代:1872</p>
+							<p>风格：印象派</p>
+							<p>体裁：风景画</p>
+							<p>材质：布面油画</p>
+							<p>
+								<a class="btn btn-info" href="#">查看</a> <a class="btn" href="#"></a>
+								<a class="btn btn-info text-justify" href="#">收藏</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div> <button type="button" class="btn btn-link btn-lg btn-block "><a class="btn" href="opus.html">
+					<h4>查看更多作品</h4>
+				</a></button>
+		</div>
+	</div>
+	</div>
+
+
+
+</body>
+
+</html>

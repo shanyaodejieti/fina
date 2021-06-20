@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>艺术家</title>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			.row-zp {
+			    margin: 80px 0px 80px 0px;
+			    }
+			
+			.img-zp {
+			    margin: 10px 10px 10px 10px;
+			    -webkit-transform: scale(1, 1);
+			    -ms-transform: scale(1, 1);
+			    transform: scale(1, 1);
+			    transition-duration: 0.3s;
+			    -webkit-transition-duration: 0.3s; /* Safari */
+			    }
+			
+			.img-zp:hover {
+				cursor: pointer;
+				-webkit-transform: scale(1.3, 1.3);
+			    -ms-transform: scale(1.3, 1.3);
+			    transform: scale(1.3, 1.3);
+			    transition-duration: 0.3s;
+			    -webkit-transition-duration: 0.3s; /* Safari */
+			    box-shadow: 10px 10px 5px #888888;
+			    z-index: 1;
+			    }
+		
+		</style>
+	</head>
+	<body>
+    <div class="container">
+			<div class="row clearfix">
+            <div class="page-header">
+				<img src="images/background-3.png" class="img-responsive center-block">
+			</div>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><img src="images/logo-2.png" height="60" width="60"><img src="images/logo-4.png" height="60" width="130"> <a class="navbar-brand" href="#"></a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					 <a href="index.html"><span class="glyphicon glyphicon-home"></span> 首页</a>
+				</li>
+	<li>
+		 <a href="opus.html"><span class="glyphicon glyphicon-picture"></span> 世界名画</a>
+	</li>
+                <li class="active">
+		             <a href="aritst.html"><span class="glyphicon glyphicon-user"></span> 艺术家</a>
+	            </li>
+	
+            <li>
+		 <a href="collect.html"><span class="glyphicon glyphicon-star-empty"></span> 收藏夹</a>
+	        </li>
+			<li>
+				<a href="report.html"><span class=""></span> 结业报告</a>
+			</li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group">
+					<input type="text" class="form-control" />
+				</div> <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a data-toggle="modal" data-target="#register" href=""> 注册</a></li>
+				<li><a data-toggle="modal" data-target="#login" href=""> 登录</a></li> 
+		  </ul>
+		  <!-- 注册窗口 -->
+		  		    <div id="register" class="modal fade" tabindex="-1">
+		  		        <div class="modal-dialog" style="width: 350px;">
+		  		            <div class="modal-content">
+		  		                <div class="modal-body">
+		  		                    <button class="close" data-dismiss="modal">
+		  		                        <span>&times;</span>
+		  		                    </button>
+		  		                </div>
+		  		                <div class="modal-title">
+		  		                    <img class="img-responsive center-block" src="images/logo-2.png">
+		  							<h1 class="text-center">注册</h1>
+		  		                </div>
+		  		                <div class="modal-body">
+		  		                    <form class="form-group" action="">
+		  		                            <div class="form-group">
+		  		                                <label for="">用户名</label>
+		  		                                <input class="form-control" type="text" placeholder="6-15位字母或数字">
+		  		                            </div>
+		  		                            <div class="form-group">
+		  		                                <label for="">密码</label>
+		  		                                <input class="form-control" type="password" placeholder="至少6位字母或数字">
+		  		                            </div>
+		  		                            <div class="form-group">
+		  		                                <label for="">再次输入密码</label>
+		  		                                <input class="form-control" type="password" placeholder="至少6位字母或数字">
+		  		                            </div>
+		  		                            <div class="form-group">
+		  		                                <label for="">邮箱</label>
+		  		                                <input class="form-control" type="email" placeholder="例如:123@123.com">
+		  		                            </div>
+		  		                            <div class="text-right">
+		  		                                <button class="btn btn-info" type="submit">提交</button>
+		  		                                <button class="btn btn-danger" data-dismiss="modal">取消</button>
+		  		                            </div>
+		  		                            <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+		  		                    </form>
+		  		                </div>
+		  		            </div>
+		  		        </div>
+		  		    </div> 
+		  		</div>
+		  		 <!-- 登录窗口 -->
+		  		    <div id="login" class="modal fade">
+		  		        <div class="modal-dialog" style="width: 350px;">
+		  		            <div class="modal-content">
+		  		                <div class="modal-body">
+		  		                    <button class="close" data-dismiss="modal">
+		  		                        <span>&times;</span>
+		  		                    </button>
+		  		                </div>
+		  		                <div class="modal-title">
+		  							<img class="img-responsive center-block" src="images/logo-2.png">
+		  		                    <h1 class="text-center">登录</h1>
+		  		                </div>
+		  		                <div class="modal-body">
+		  		                    <form class="form-group" action="">
+		  		                            <div class="form-group">
+		  		                                <label for="请输入用户名">用户名</label>
+		  		                                <input class="form-control" type="text" placeholder="请输入用户名">
+		  		                            </div>
+		  		                            <div class="form-group">
+		  		                                <label for="请输入密码">密码</label>
+		  		                                <input class="form-control" type="password" placeholder="请输入密码">
+		  		                            </div>
+		  		                            <div class="text-right">
+		  		                                <button class="btn btn-info" type="submit">登录</button>
+		  		                                <button class="btn btn-danger" data-dismiss="modal">取消</button>
+		  		                            </div>
+		  		                            <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+		  		                    </form>
+		  		                </div>
+		  		            </div>
+		  		        </div>
+		  		    </div>	
+		  <!-- 登录注册end -->	
+	</nav>
+    
+    <div class="container">
+    <div class="row">
+		<img src="images/background-2.jpg" class="img-responsive">
+		<div class="clearfix" style="margin-bottom: 50px;"></div>
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/莫奈.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3><a href="monai.html">
+						劳克德·莫奈</a><br><small>1840.11.14－1926.12.5</small>
+					</h3>
+                    <p>法国 印象派</p><p>代表作:《日出·印象》《睡莲》《干草堆》 </p>
+				</div>
+				<div class="col-md-7 column">
+					<div class="row">
+						<div class="col-md-4 column">
+							<img alt="140x140" src="images/Water Lilies-2.jpg" class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="140x140" src="images/d_8.jpeg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="140x140" src="images/Giverny in Springtime.jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/达芬奇.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3>
+						莱昂纳多·达·芬奇<br><small>1425.4.15－1519.5.2</small>
+					</h3>
+                    <p>意大利 </p><p>代表作:《蒙娜丽莎》《最后的晚餐》</p>
+				</div>
+				<div class="col-md-7 column">
+					<div class="row clearfix">
+						<div class="col-md-4 column">
+							<img alt="140x140" src="images/d_1.jpg"class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="140x140" src="images/d_2..jpg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="140x140" src="images/The Lady with an Ermine (Cecilia Gallerani).jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr>
+    <div class="row">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/文森特.梵高.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3>
+						文森特·威廉·梵高<br><small>1853.3.30—1890.7.29</small>
+					</h3>
+                    <p>荷兰 后印象派</p><p>代表作:《星月夜》、自画像系列、向日葵系列等。</p>
+				</div>
+				<div class="col-md-7 column">
+					<div class="row">
+						<div class="col-md-4 column">
+							<img alt="180x180" src="images/d_5.jpg" class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/d_4.jpeg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/Wheat Fields at Auvers Under Clouded Sky.jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr>
+    <div class="row">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/毕加索.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3>
+						巴勃罗·鲁伊斯·毕加索<br><small>1881.10.25－1973.4.8</small>
+					</h3>
+                    <p>西班牙 现代派</p><p>代表作:《斗牛士》《格尔尼卡》《和平鸽》《梦》</p>
+                    
+				</div>
+				<div class="col-md-7 column">
+					<div class="row">
+						<div class="col-md-4 column">
+							<img alt="180x180" src="images/The mass grave.jpg"class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/Girl in chair.jpg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/Algerian women (Delacroix).jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr>
+    <div class="row">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/雷诺阿.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3>
+						皮埃尔·奥古斯特·雷诺阿<br><small>1841.2.25－1919.12.3</small>
+					</h3>
+                    <p>法国 印象派</p><p>代表作:《煎饼磨坊的舞会》《船上的午宴》《包厢》</p>
+                    
+				</div>
+				<div class="col-md-7 column">
+					<div class="row">
+						<div class="col-md-4 column">
+							<img alt="180x180" src="images/游艇上的午餐.jpg"class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/两姐妹.jpg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/散步.jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr><div class="row">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-2 column">
+					<img alt="140x140" src="images/乔凡尼·巴蒂斯塔·皮拉内西.jpg" height="140" width="140" class="img-circle img-responsive" />
+				</div>
+				<div class="col-md-3 column">
+					<h3>
+						乔凡尼·巴蒂斯塔·皮拉内西<br><small>1720-1778</small>
+					</h3>
+                    <p>意大利 </p><p>代表作：《卡西里·德·英芬辛内》</p>
+                    
+				</div>
+				<div class="col-md-7 column">
+					<div class="row">
+						<div class="col-md-4 column">
+							<img alt="180x180" src="images/Carceri VII.jpg" class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/The Prisons (plate VI).jpg" 5 class="img-artist img-zp" />
+						</div>
+						<div class="col-md-4 column">
+                            <img alt="180x180" src="images/Self-Portrait.jpg" class="img-artist img-zp" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
+    <div class="clearfix" style="margin-bottom: 25px;"></div>
+    <hr>
+
+    
+</div>
+  <div class="col-md-12 column">
+  		<ul class="pagination">
+  			<li>
+  				 <a href="#">上一页</a>
+  			</li>
+  			<li class="active">
+  				 <a href="#">1</a>
+  			</li>
+  			<li>
+  				 <a href="#">2</a>
+  			</li>
+  			<li>
+  				 <a href="#">3</a>
+  			</li>
+  			<li>
+  				 <a href="#">4</a>
+  			</li>
+  			<li>
+  				 <a href="#">5</a>
+  			</li>
+  			<li>
+  				 <a href="#">下一页</a>
+  			</li>
+  		</ul>
+  	</div>
+  </div>
+
+
+	</body>
+	
+</html>
